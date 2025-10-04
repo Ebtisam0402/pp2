@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Cream Order Form </title>
+ <!-- Favicon -->
+  <link rel="icon" href="images/icecream-icon.jpeg">
+  <!-- Style sheeet -->
+  <link rel="stylesheet" href="icecream-style.css">  
+</head>
+<body>
+    <main>
+        <header>
+    <h1>Ice Cream Order Form</h1>
+   
+    </header>
+   <img src="images/icecream.jpeg" alt="ice cream">
+    <form id="pizza-form" action="#" method="get">
+ <fieldset id="fieldset1">
+    <legend id="legend1">Personal Information</legend>
+    <label for="fname"> Name:</label>
+    <input type="text" id="fname" name="fname">
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email">
+            
+  </fieldset>
+        <!-- order details -->
+          <fieldset id="fieldset2">
+            <legend id="legend2">Order Details</legend>
+             <!-- Choose your flavour -->
+              <fieldset>
+                <legend>Choose your flavour</legend>
+                <select id="flavour" name="flavour">
+                    <option value="vanilla">Vanilla</option>
+                    <option value="chocolate">Chocolate</option>
+                    <option value="oreo">Oreo</option>
+                    <option value="cookie and caramel">Cookie & Cream</option>
+                </select>
+            </fieldset>
+             <!-- Choose your cone -->
+            <fieldset>
+                <legend>Choose Your Cone</legend>
+                <label for="wafflecone">
+                    <input type="radio" id="wafflecone" name="method"
+                           value="wafflecone">Waffle Cone
+                </label>
+                <label for="sugercone">
+                    <input type="radio" id="sugercone" name="method"
+                           value="sugercone">Suger Cone
+                </label>
+                 <label for="cup">
+                    <input type="radio" id="cup" name="method"
+                           value="cup">Cup
+                </label>
+            </fieldset>
+                   <!-- Toppings -->
+            <fieldset>
+                <legend>Select Toppings</legend>
+                <label for="sprinkles">
+                    <input type="checkbox" id="sprinkles" name="toppings[]"
+                           value="sprinkles">Sprinkles
+                </label>
+                <label for="nuts">
+                    <input type="checkbox" id="nuts" name="toppings[]"
+                           value="nuts">Nuts
+                </label>
+                 <label for="cherry">
+                    <input type="checkbox" id="cherry" name="toppings[]"
+                           value="cherry">Cherry
+                </label>
+                 <label for="whippedcream">
+                    <input type="checkbox" id="whippedcream" name="toppings[]"
+                           value="whippedcream">Whipped Cream
+                </label>
+                 <footer>
+  
+     
+</footer>
+     
+            </fieldset>
+
+             
+             <!-- Comment field -->
+            <label for="comment">Additional Comments:</label>
+            <textarea rows="5" id="comment" name="comment"></textarea>
+             </fieldset>
+              <!-- Add an Order button -->
+               
+           
+           <div class="button-container">
+  <input type="submit" value="Submit Order" class="centered-button">
+</div>
+          
+     </form>
+
+   </main>
+   
+
+    
+</body>
+</html>
