@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ice Cream Order Form </title>
+    <!-- Link to JavaScript -->
+  <script src="js/icecream.js" defer></script> 
  <!-- Favicon -->
   <link rel="icon" href="images/icecream-icon.jpeg">
   <!-- Style sheeet -->
   <link rel="stylesheet" href="icecream-style.css"> 
-   <!-- Link to JavaScript -->
-  <script src="js/icecream.js"defer></script> 
+   
 </head>
 <body>
     <main>
@@ -36,10 +37,12 @@
         <!-- order details -->
           <fieldset id="fieldset2">
             <legend id="legend2">Order Details</legend>
-             <!-- Choose your flavour -->
-            <fieldset id = "flavour">
-                <legend>Choose your flavour</legend>
-                <select id="flavour" name="flavour">
+
+             <!-- Choose your flavor -->
+            <fieldset id = "flavor-fieldset">
+                <legend>Choose your flavor</legend>
+                <select id="flavor" name="flavor">
+                    <option value="">--Please select--</option>
                     <option value="vanilla">Vanilla</option>
                     <option value="chocolate">Chocolate</option>
                     <option value="oreo">Oreo</option>
@@ -56,14 +59,13 @@
                            value="wafflecone">Waffle Cone
                 </label>
                 <label for="sugercone">
-                    <input type="radio" id="sugercone" name="method"
-                           value="sugercone">Suger Cone
+                    <input type="radio" id="sugarcone" name="method" value="sugarcone">Sugar Cone
                 </label>
                  <label for="cup">
                     <input type="radio" id="cup" name="method"
                            value="cup">Cup
                 </label>
-                <span id="err-cone" class="error">Cone required</span>
+                <span id="err-method" class="error">Cone required</span>
             </fieldset>
             
                    <!-- Toppings -->
@@ -85,30 +87,20 @@
                     <input type="checkbox" id="whippedcream" name="toppings[]"
                            value="whippedcream">Whipped Cream
                 </label>
-                 <footer>
-  
-     
-</footer>
-     
-            </fieldset>
+                </fieldset>
 
              
              <!-- Comment field -->
             <label for="comment">Additional Comments:</label>
-            <textarea rows="5" id="comment" name="comment"></textarea>
-             </fieldset>
-              <!-- Add an Order button -->
-               
-           
-           <div class="button-container">
-  <input type="submit" value="Submit Order" class="centered-button">
-</div>
+            <textarea id="comment" name="comment" rows="5" ></textarea>
+        </fieldset>
+             
+          <!-- Add an Order button -->
+          <!-- <button type="submit" id="Submit-Order">Submit Order</button>-->
+          <div class="button-container"> <input type="submit" value="Submit Order" 
+            class="centered-button"> </div>
           
-     </form>
-
-   </main>
-   
-
-    
-</body>
+       </form>
+    </main>
+   </body>
 </html>

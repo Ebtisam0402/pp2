@@ -1,6 +1,6 @@
 
 // When the form is submitted, validate
-document.getElementById('icecream').onsubmit = () =>{
+document.getElementById('icecream').onsubmit = () => {
 
     clearErrors();
 
@@ -21,11 +21,18 @@ document.getElementById("err-email").style.display = "block";
 isValid = false;
 }
 
-// Validate method (flavour)
-let methodButtons = document.getElementsByName("method");
+//Validate flavor
+let flavor = document.getElementById('flavor').value;
+if(!flavor){
+document.getElementById("err-flavor").style.display = "block";
+isValid = false;
+}
+
+// Validate method (cone)
+let coneButtons = document.getElementsByName("method");
 let count = 0;
-for(let i=0; i < methodButtons.length; i++){
-        if(methodButtons[i].checked){
+for(let i=0; i < coneButtons.length; i++){
+        if(coneButtons[i].checked){
             count++;
         }
     }
@@ -34,12 +41,7 @@ document.getElementById("err-method").style.display = "block";
 isValid = false;
 }
 
-//Validate cone
-let cone = document.getElementById('cone').value;
-if(cone === "none"){
-document.getElementById("err-size").style.display = "block";
-isValid = false;
-}
+
 
 
 // return is valid flag
@@ -48,7 +50,7 @@ return isValid;
 }
 function clearErrors(){
     let errors = document.getElementsByClassName("error");
-    for(let i=0; i<errors.length; i++){
+    for(let i=0; i < errors.length; i++){
         errors[i].style.display = "none";
     }
 }
