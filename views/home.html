@@ -7,7 +7,9 @@
  <!-- Favicon -->
   <link rel="icon" href="images/icecream-icon.jpeg">
   <!-- Style sheeet -->
-  <link rel="stylesheet" href="icecream-style.css">  
+  <link rel="stylesheet" href="icecream-style.css"> 
+   <!-- Link to JavaScript -->
+  <script src="js/icecream.js"defer></script> 
 </head>
 <body>
     <main>
@@ -16,30 +18,38 @@
    
     </header>
    <img src="images/icecream.jpeg" alt="ice cream">
-    <form id="pizza-form" action="#" method="get">
- <fieldset id="fieldset1">
+
+    <form id="icecream" action="#" method="get">
+   <!-- personal information -->
+    <fieldset id="fieldset1">
     <legend id="legend1">Personal Information</legend>
     <label for="fname"> Name:</label>
     <input type="text" id="fname" name="fname">
+    <span id="err-fname" class="error">First name cannot be empty!</span>
+
     <label for="email">Email:</label>
     <input type="text" id="email" name="email">
+    <span id="err-email" class="error">Email cannot be empty!</span>
             
   </fieldset>
+
         <!-- order details -->
           <fieldset id="fieldset2">
             <legend id="legend2">Order Details</legend>
              <!-- Choose your flavour -->
-              <fieldset>
+            <fieldset id = "flavour">
                 <legend>Choose your flavour</legend>
                 <select id="flavour" name="flavour">
                     <option value="vanilla">Vanilla</option>
                     <option value="chocolate">Chocolate</option>
                     <option value="oreo">Oreo</option>
                     <option value="cookie and caramel">Cookie & Cream</option>
-                </select>
+                   </select>
+                  <span id="err-flavor" class="error">flavor required</span>
             </fieldset>
+            
              <!-- Choose your cone -->
-            <fieldset>
+            <fieldset id ="cone">
                 <legend>Choose Your Cone</legend>
                 <label for="wafflecone">
                     <input type="radio" id="wafflecone" name="method"
@@ -53,7 +63,9 @@
                     <input type="radio" id="cup" name="method"
                            value="cup">Cup
                 </label>
+                <span id="err-cone" class="error">Cone required</span>
             </fieldset>
+            
                    <!-- Toppings -->
             <fieldset>
                 <legend>Select Toppings</legend>

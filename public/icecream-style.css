@@ -121,7 +121,10 @@ label {
   
    /* Or define a specific width */
 }
-
+.error {
+    color:red;
+    display: none;
+}
 /* Mobile styles */
 @media (max-width: 480px) {
     #main {
